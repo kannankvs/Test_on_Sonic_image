@@ -5,4 +5,4 @@ git add s1.json
 git commit -m "d2 latest links for sonic images"
 git config user.email "Kannan_KVS@Dell.com"
 git config user.name "kannankvs"
-git push origin BR1
+git push 
