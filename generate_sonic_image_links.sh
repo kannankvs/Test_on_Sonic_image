@@ -1,6 +1,4 @@
 #!/usr/bin bash -e
-echo checkout_line
-git checkout -b br2
 echo config_line
 git config --global user.email "Kannan_KVS@Dell.com"
 git config --global user.name "kannankvs"
