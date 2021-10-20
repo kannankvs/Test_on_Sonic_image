@@ -3,6 +3,7 @@ git checkout -b br3
 git config --global user.email "Kannan_KVS@Dell.com"
 git config --global user.name "kannankvs"
 git config pull.rebase true
+git rebase --skip
 git pull --allow-unrelated-histories origin br3
 DEFID_BRCM="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions?name=Azure.sonic-buildimage.official.broadcom' | jq -r '.value[0].id')"
 DEFID_MLNX="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions?name=Azure.sonic-buildimage.official.mellanox' | jq -r '.value[0].id')"
