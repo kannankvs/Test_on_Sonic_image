@@ -2,7 +2,7 @@
 git checkout -b br2
 git config --global user.email "Kannan_KVS@Dell.com"
 git config --global user.name "kannankvs"
-git pull --ff-only origin br2
+git pull --allow-unrelated-histories origin br2
 echo '{ KVSK - s2 script ?' > s2.json
 echo "\n}" >> s2.json
 git add s2.json
