@@ -1,4 +1,4 @@
-#!/usr/bin bash
+#!/usr/bin bash -e
 echo '{ KVSK1-Prasanna - S1 - Try1' > s1.json
 echo "\n}" >> s1.json
 git add s1.json
