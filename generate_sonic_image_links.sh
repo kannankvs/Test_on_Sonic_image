@@ -1,6 +1,4 @@
 #!/usr/bin bash -e
-git clone https://github.com/kannankvs/Test2.git
-cd Test2
 echo checkout_line
 git checkout -b br2
 echo config_line
