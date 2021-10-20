@@ -1,9 +1,9 @@
 #!/usr/bin bash -e
-git checkout -b br2
+git checkout -b br3
 git config --global user.email "Kannan_KVS@Dell.com"
 git config --global user.name "kannankvs"
 git config pull.rebase true
-git pull --allow-unrelated-histories origin br2
+git pull --allow-unrelated-histories origin br3
 DEFID_BRCM="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions?name=Azure.sonic-buildimage.official.broadcom' | jq -r '.value[0].id')"
 DEFID_MLNX="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions?name=Azure.sonic-buildimage.official.mellanox' | jq -r '.value[0].id')"
 DEFID_VS="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions?name=Azure.sonic-buildimage.official.vs' | jq -r '.value[0].id')"
@@ -148,4 +148,4 @@ done
 echo "\n}" >> sonic_image_links.json
 git add sonic_image_links.json
 git commit -m "latest links for sonic images"
-git push -f --set-upstream origin br2
+git push -f --set-upstream origin br3
