@@ -10,5 +10,5 @@ echo GIT add
 git add s1.json
 git commit -m "latest links for sonic images"
 echo GIT last push
-git pull --allow-unrelated-histories
+git pull origin br2
 git push -u origin br2
