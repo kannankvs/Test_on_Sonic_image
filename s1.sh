@@ -2,7 +2,7 @@
 git checkout -b br2
 git config --global user.email "Kannan_KVS@Dell.com"
 git config --global user.name "kannankvs"
-git fetch
+git pull origin br2
 git push origin br2
 echo '{ KVSK2-Prasanna2 - is it working now?' > s1.json
 echo "\n}" >> s1.json
