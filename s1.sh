@@ -8,7 +8,7 @@ git config --global user.email "Kannan_KVS@Dell.com"
 git config --global user.name "kannankvs"
 echo '{ KVSK1-Prasanna1 - S1 - Try1' > s1.json
 echo "\n}" >> s1.json
-ECHO GIT add
+echo GIT add
 git add s1.json
 git commit -m "latest links for sonic images"
 echo GIT last push
