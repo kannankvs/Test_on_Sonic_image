@@ -1,8 +1,8 @@
 #!/usr/bin bash -e
-git checkout -b BR1
+git checkout -b br2
 git config --global user.email "Kannan_KVS@Dell.com"
 git config --global user.name "kannankvs"
-git pull --ff-only origin BR1
+git pull --ff-only origin br2
 
 DEFID_BRCM="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions?name=Azure.sonic-buildimage.official.broadcom' | jq -r '.value[0].id')"
 DEFID_MLNX="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions?name=Azure.sonic-buildimage.official.mellanox' | jq -r '.value[0].id')"
@@ -149,4 +149,4 @@ echo "\n}" >> sonic_image_links.json
 
 git add sonic_image_links.json
 git commit -m "latest links for sonic images"
-git push -f --set-upstream origin BR1
+git push -f --set-upstream origin br2
