@@ -4,7 +4,6 @@ echo "\n}" >> s1.json
 git branch br2
 git checkout br2
 git push origin br2
-git init
 git add s1.json
 git config --global user.email "Kannan_KVS@Dell.com"
 git config --global user.name "kannankvs"
