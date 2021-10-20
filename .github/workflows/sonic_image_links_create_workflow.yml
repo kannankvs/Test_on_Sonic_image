@@ -15,6 +15,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v2 
-        
+        with:
+          ref: 'br2'
       - name: Run the script to build a json file with details about various builds for various platforms
         run: sh ./generate_sonic_image_links.sh
