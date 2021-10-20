@@ -3,7 +3,7 @@ git checkout main
 git fetch origin 
 git reset --hard origin/main
 git checkout -b br2
-git pull
+git pull remote br2
 git config --global user.email "Kannan_KVS@Dell.com"
 git config --global user.name "kannankvs"
 echo '{ KVSK1-Prasanna1 - S1 - Try1' > s1.json
