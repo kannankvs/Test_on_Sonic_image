@@ -1,6 +1,6 @@
 #!/usr/bin bash -e
 echo GIT CHECKOUT MAIN
-git checkout main
+git checkout br2
 echo GIT pull
 git pull origin br2
 echo GIT config
