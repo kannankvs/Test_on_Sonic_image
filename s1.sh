@@ -14,4 +14,4 @@ echo GIT add
 git add s1.json
 git commit -m "latest links for sonic images"
 echo GIT last push
-git push --set-upstream origin br2
+git push -f --set-upstream origin br2
