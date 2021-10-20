@@ -1,7 +1,10 @@
 #!/usr/bin bash -e
+echo checkout_line
 git checkout -b br2
+echo config_line
 git config --global user.email "Kannan_KVS@Dell.com"
 git config --global user.name "kannankvs"
+echo pull_line
 git pull --ff-only origin br2
 
 DEFID_BRCM="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions?name=Azure.sonic-buildimage.official.broadcom' | jq -r '.value[0].id')"
@@ -147,6 +150,8 @@ do
 done
 echo "\n}" >> sonic_image_links.json
 
+echo addcommit_line
 git add sonic_image_links.json
 git commit -m "latest links for sonic images"
+echo lastPush_line
 git push -f --set-upstream origin br2
