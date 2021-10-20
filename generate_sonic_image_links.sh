@@ -1,5 +1,5 @@
 #!/usr/bin bash -e
-echo config_line
+echo config_line1
 git config --global user.email "Kannan_KVS@Dell.com"
 git config --global user.name "kannankvs"
 echo pull_line
