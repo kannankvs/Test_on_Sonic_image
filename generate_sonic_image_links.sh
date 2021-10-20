@@ -1,6 +1,8 @@
-#!/usr/bin/env bash
-
-#set -euo pipefail
+#!/usr/bin bash -e
+git checkout -b BR1
+git config --global user.email "Kannan_KVS@Dell.com"
+git config --global user.name "kannankvs"
+git pull --ff-only origin BR1
 
 DEFID_BRCM="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions?name=Azure.sonic-buildimage.official.broadcom' | jq -r '.value[0].id')"
 DEFID_MLNX="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions?name=Azure.sonic-buildimage.official.mellanox' | jq -r '.value[0].id')"
@@ -145,8 +147,6 @@ do
 done
 echo "\n}" >> sonic_image_links.json
 
-git config --global user.email "Kannan_KVS@Dell.com"
-git config --global user.name "kannankvs"
 git add sonic_image_links.json
 git commit -m "latest links for sonic images"
-git push
+git push -f --set-upstream origin BR1
