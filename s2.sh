@@ -16,7 +16,7 @@ DEFID_GRC="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definition
 DEFID_MRV="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions?name=Azure.sonic-buildimage.official.marvell-armhf' | jq -r '.value[0].id')"
 DEFID_NPH="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions?name=Azure.sonic-buildimage.official.nephos' | jq -r '.value[0].id')"
 
-echo '{KVSK_BR3_ABCD' > sonic_image_links.json
+echo '{' > sonic_image_links.json
 first=1
 for BRANCH in  master 202106 202012 201911 201811  
 do
