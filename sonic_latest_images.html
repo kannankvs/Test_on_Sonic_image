@@ -87,11 +87,12 @@
 		    for (let i = branches.length - 1 ; i >= branches.length - 1; i--) {
 			display_data = "<td style=\" text-align: center; padding-left: 0.5em; background-color: lightgrey; height: 45px; align: center;\"><span style=\"letter-spacing: 0.15em;  font-weight: bold; font-size: calc(11px + 0.6vw); \">" + branches[i].toUpperCase() +"</span></td>";
 			d3 = branches[i];
-			images = Object.keys(data[branches[i]]);
-			brcm_image = data[branches[i]][images[0]];
-			brcm_image_url = image['url'];
+			all_images = Object.keys(data[branches[i]]);
+			brcm_image = data[branches[i]][all_images[0]];
+			brcm_image_url = brcm_image['url'];
 			$("#master_branch").append(brcm_image_url);
 			$("#branch").append(display_data);
+			images = Object.keys(data[branches[i]]);
 			for (let j = 0; j < images.length; j++) {
 			    image_name = images[j];
 			    image = data[branches[i]][images[j]];
