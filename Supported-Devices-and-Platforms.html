@@ -1054,13 +1054,12 @@ function Port_Config() {
 <td>32x400G</td>
 <td><a href="https://sonic-jenkins.westus2.cloudapp.azure.com/job/broadcom/job/buildimage-brcm-all/lastSuccessfulBuild/artifact/target/sonic-broadcom.bin" rel="nofollow">SONiC-ONIE-Broadcom</a></td>
 </tr>
-<tr>
+<tr id="brcm_id">
 <td>Wnc</td>
 <td>OSW1800</td>
 <td>Barefoot</td>
 <td>Tofino</td>
 <td>48x25G + 6x100G</td>
-<td><a href="https://sonic-jenkins.westus2.cloudapp.azure.com/job/barefoot/job/buildimage-bf-all/lastSuccessfulBuild/artifact/target/sonic-barefoot.bin" rel="nofollow">SONiC-ONIE-Barefoot</a></td>
 </tr>
 </tbody>
 </table>
@@ -1082,6 +1081,27 @@ Note:
 <br>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+<script>
+	$(document).ready(function () {
+	    $.getJSON("sonic_image_links.json", 
+		function(data) {
+		    dbs = data;
+		    branches = Object.keys(data);
+		    image_data = [];
+				images = Object.keys(data[branches[0]]);
+				brcm_image_name = images[0];
+				brcm_image = data[branches[0]][images[0]];
+				brcm_image_url = image['url'];
+				brcm_image_column ="<td style=\"text-align: center;\"><span style=\"color: #0000ff;\"><a href=\""+ brcm_image_url +"\">"+brcm_image_name+"</a></span></td>";
+			    $("#brcm_id").append(brcm_image_column);
+			}
+		    }
+
+		});
+	});
+</script>
+
 
 <head>
 <body>
