@@ -33,193 +33,7 @@
 }
 
 
-
-#myInput {
-  
-  background-position: 10px 12px; /* Position the search icon */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 75%; /* Full-width */
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
-}
-#myInput2 {
-  
-  background-position: 10px 12px; /* Position the search icon */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 75%; /* Full-width */
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
-}
-#myInput3 {
-  
-  background-position: 10px 12px; /* Position the search icon */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 75%; /* Full-width */
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
-}
-
-#myInput4 {
-  
-  background-position: 10px 12px; /* Position the search icon */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 75%; /* Full-width */
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
-}
-#myTable {
-  border-collapse: collapse; /* Collapse borders */
-  width: 100%; /* Full-width */
-  border: 1px solid #000000; /* Add a grey border */
-  font-size: 18px; /* Increase font-size */
-}
-
-#myTable th, #myTable td {
-  text-align: left; /* Left-align text */
-  padding: 12px; /* Add padding */
-   border: 1px solid #000000;
-}
-
-#myTable tr {
-  /* Add a bottom border to all table rows */
-  border: 1px solid #000000;
-}
-
-#myTable tr.header, #myTable tr:hover {
-  /* Add a grey background color to the table header and on hover */
-  background-color: #D5DBDB ;
-   border: 1px solid #ffffff; /* Add a grey border */
-}
-img.two {
-  height: auto%;
-  width: auto%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-k {
-  font-family: "Verdana", sans-serif;
-  font-size: 50px;
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: condensed;
-  color: #2E86C1;
-
-}
-</style>
-<script>
-
-
-function myFunction() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
-function ASIC_Vendor() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput2");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[2];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
-function Switch_ASIC() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput3");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[3];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
-function Port_Config() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput4");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[4];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
-
-</script>
 <body>
-<div class="splitr left">
-  <div class="centered">
-<br>
-<br> 
-<br>
-<br>   
- <p style="text-align: left; font-family: Verdana, sans-serif; color: #ffffff;  font-size: 20px">&nbsp;&nbsp;Filter your search </p>
-<center>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Vendor.."><br>
-<input type="text" id="myInput2" onkeyup="ASIC_Vendor()" placeholder="Search for ASIC Vendor.."><br>
-<input type="text" id="myInput3" onkeyup="Switch_ASIC()" placeholder="Search for Switch ASIC .."><br>
-<input type="text" id="myInput4" onkeyup="Port_Config()" placeholder="Search for Port Config .."></center>
-  </div>
-</div>
 
 <div class="splitl right">
   <div class="centered">
@@ -235,7 +49,7 @@ function Port_Config() {
 </tr>
 </tbody>
 </table>
-<h2><p style="text-align: left; font-family: Verdana, sans-serif; color: #2E86C1; font-size: 20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Following10 is the list of platforms that supports SONiC.</p></h2>
+<h2><p style="text-align: left; font-family: Verdana, sans-serif; color: #2E86C1; font-size: 20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Following11 is the list of platforms that supports SONiC.</p></h2>
 <br>
 
 <table id="myTable" style="width: 70%; background-color: #ffffff; font-family: Verdana, sans-serif;" align="center">
@@ -341,5 +155,6 @@ $(document).ready(function () {
 		});
 });
 </script>
-<head>
-<body>
+</body>
+</head>
+
