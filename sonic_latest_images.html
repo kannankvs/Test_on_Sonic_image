@@ -46,7 +46,7 @@
 						<div class="col-md-12">
 						
 								<h2 id="abcd_id"> Latest Successful BuildsWithAbcdIdVariable </h2>
-							<h2 id="master_branch"> Latest Successful BuildsWithMasterName </h2>
+							<h2 id="master_branch"> Latest Successful BuildsWithMasterBranch </h2>
 						</div>
 					</div>
 				</div>
@@ -82,11 +82,11 @@
 		    dbs = data;
 		    branches = Object.keys(data);
 		    image_data = [];
-			d2 = "abcd3";
+			d2 = "abcd4";
 			$("#abcd_id").append(d2);
-		    for (let i = 0 ; i < 1; i++) {
+		    for (let i = branches.length - 1 ; i >= branches.length - 1; i--) {
 			display_data = "<td style=\" text-align: center; padding-left: 0.5em; background-color: lightgrey; height: 45px; align: center;\"><span style=\"letter-spacing: 0.15em;  font-weight: bold; font-size: calc(11px + 0.6vw); \">" + branches[i].toUpperCase() +"</span></td>";
-			d3 = branches[i]
+			d3 = branches[i];
 			$("#master_branch").append(d3);
 			$("#branch").append(display_data);
 			images = Object.keys(data[branches[i]]);
