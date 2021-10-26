@@ -1146,6 +1146,11 @@ Note:
 			if (vdata == "Nvidia")
 			    vdata = "Mellanox";
 
+			if (vdata == "Marvell"){
+			    if(table[i].children[1].textContent.search("ARM") != -1)
+				vdata = "Marvell-armhf";
+			}
+
 			if(vendor_data[vdata] == "")
 			    table[i].children[5].innerHTML = "<td style=\"text-align: center;\"><span style=\"color: #0000ff;\">N/A</span></td>";
 			else
