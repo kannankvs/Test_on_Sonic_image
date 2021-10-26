@@ -116,58 +116,8 @@ k {
 
 }
 </style>
-    <script>
-	$(document).ready(function () {
-	    $.getJSON("sonic_image_links.json", 
-		function(data) {
-		    dbs = data;
-		    branches = Object.keys(data);
-		    image_data = [];
-			d2 = "abcd8";
-			$("#abcd_id").append(d2);
-		    for (let i = branches.length - 1 ; i >= branches.length - 1; i--) {
-			display_data = "<td style=\" text-align: center; padding-left: 0.5em; background-color: lightgrey; height: 45px; align: center;\"><span style=\"letter-spacing: 0.15em;  font-weight: bold; font-size: calc(11px + 0.6vw); \">" + branches[i].toUpperCase() +"</span></td>";
-			d3 = branches[i];
-			all_images = Object.keys(data[branches[i]]);
-			brcm_image = data[branches[i]][all_images[0]];
-			brcm_image_url = brcm_image['url'];
-			brcm_image_name = all_images[0];			
-			brcm_image_link ="<a href=\""+brcm_image_url+"\">"+brcm_image_name+"</a>";			
-			$("#brcm_image_link_var").append(brcm_image_link);
-			$("#branch").append(display_data);
-			images = Object.keys(data[branches[i]]);
-			for (let j = 0; j < images.length; j++) {
-			    image_name = images[j];
-			    image = data[branches[i]][images[j]];
-			    image_platform = image_name.split(".")[0];
-			    if(image_platform.length == 1){
-				platform = ""
-			    }else{
-				platform = image_platform.split("sonic-")[1];
-				if(platform.length == 1){
-				    platform = ""
-				}
-			    }
-			    image_avail = true;
-			    image_url = image['url'];
-			    if(image_url === 'null' || image_url === ""){
-				image_avail = false;
-			    }
-			    if ( !$("#"+platform).length ){
-				platform_column = "<tr id=\""+ platform +"\"><td style=\" text-align: center; \"><strong>"+ platform.toUpperCase()+"</strong></td></tr>";
-				$("#disp_table").append(platform_column);
-			    }
-			    if (image_avail)
-				image_column ="<td style=\"text-align: center;\"><span style=\"color: #0000ff;\"><a href=\""+ image_url +"\">"+image_name+"</a></span></td>";
-			    else
-				image_column ="<td style=\"text-align: center;\"><span style=\"color: #0000ff;\">N/A</span></td>";
+<script>
 
-			    $("#"+platform).append(image_column);
-			}
-		    }
-
-		});
-	});
 
 function myFunction() {
   // Declare variables
@@ -285,7 +235,7 @@ function Port_Config() {
 </tr>
 </tbody>
 </table>
-<h2><p style="text-align: left; font-family: Verdana, sans-serif; color: #2E86C1; font-size: 20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Following8 is the list of platforms that supports SONiC.</p></h2>
+<h2><p style="text-align: left; font-family: Verdana, sans-serif; color: #2E86C1; font-size: 20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Following9 is the list of platforms that supports SONiC.</p></h2>
 <br>
 
 <table id="myTable" style="width: 70%; background-color: #ffffff; font-family: Verdana, sans-serif;" align="center">
@@ -338,5 +288,58 @@ Note:
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+<script>
+$(document).ready(function () {
+	    $.getJSON("sonic_image_links.json", 
+		function(data) {
+		    dbs = data;
+		    branches = Object.keys(data);
+		    image_data = [];
+			d2 = "abcd8";
+			$("#abcd_id").append(d2);
+		    for (let i = branches.length - 1 ; i >= branches.length - 1; i--) {
+			display_data = "<td style=\" text-align: center; padding-left: 0.5em; background-color: lightgrey; height: 45px; align: center;\"><span style=\"letter-spacing: 0.15em;  font-weight: bold; font-size: calc(11px + 0.6vw); \">" + branches[i].toUpperCase() +"</span></td>";
+			d3 = branches[i];
+			all_images = Object.keys(data[branches[i]]);
+			brcm_image = data[branches[i]][all_images[0]];
+			brcm_image_url = brcm_image['url'];
+			brcm_image_name = all_images[0];			
+			brcm_image_link ="<a href=\""+brcm_image_url+"\">"+brcm_image_name+"</a>";			
+			$("#brcm_image_link_var").append(brcm_image_link);
+			$("#branch").append(display_data);
+			images = Object.keys(data[branches[i]]);
+			for (let j = 0; j < images.length; j++) {
+			    image_name = images[j];
+			    image = data[branches[i]][images[j]];
+			    image_platform = image_name.split(".")[0];
+			    if(image_platform.length == 1){
+				platform = ""
+			    }else{
+				platform = image_platform.split("sonic-")[1];
+				if(platform.length == 1){
+				    platform = ""
+				}
+			    }
+			    image_avail = true;
+			    image_url = image['url'];
+			    if(image_url === 'null' || image_url === ""){
+				image_avail = false;
+			    }
+			    if ( !$("#"+platform).length ){
+				platform_column = "<tr id=\""+ platform +"\"><td style=\" text-align: center; \"><strong>"+ platform.toUpperCase()+"</strong></td></tr>";
+				$("#disp_table").append(platform_column);
+			    }
+			    if (image_avail)
+				image_column ="<td style=\"text-align: center;\"><span style=\"color: #0000ff;\"><a href=\""+ image_url +"\">"+image_name+"</a></span></td>";
+			    else
+				image_column ="<td style=\"text-align: center;\"><span style=\"color: #0000ff;\">N/A</span></td>";
+
+			    $("#"+platform).append(image_column);
+			}
+		    }
+
+		});
+});
+</script>
 <head>
 <body>
