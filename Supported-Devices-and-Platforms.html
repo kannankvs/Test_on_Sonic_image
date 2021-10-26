@@ -248,6 +248,15 @@ function Port_Config() {
 </tbody>
 </table>
 <p>&nbsp;</p>
+
+      <p>
+          Click on the button to fetch employee data
+      </p>
+           
+      <div id = "display" style = "background-color:#39B54A;"></div>
+           
+      <input type = "button" id = "fetch" value = "Fetch Employee Data" />
+
  <p style="text-align: left; margin-left : 2em; font-family: Verdana, sans-serif; font-size: 16px;">
 Note:
 <ol style="text-align: left; margin-left : 4em; line-height:2em;  font-family: Verdana, sans-serif; font-size: 15px;">
@@ -311,6 +320,24 @@ Note:
 	});
 </script>
 
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+      
+    <!-- Script to get JSON file and display its content -->
+    <script type = "text/javascript" language="javascript">
+        $(document).ready(function() {
+               
+            $("#fetch").click(function(event){
+                $.getJSON('employee.json', function(emp) {
+                    $('#display').html('<p> Name: ' + emp.name + '</p>');
+                    $('#display').append('<p>Age : ' + emp.age+ '</p>');
+                    $('#display').append('<p> Role: ' + emp.role+ '</p>');
+                    $('#display').append('<p> Company: ' + emp.company+ '</p>');
+                });
+            });
+        });
+      </script>
 
 <head>
 <body>
