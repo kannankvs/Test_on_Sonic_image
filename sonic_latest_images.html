@@ -89,7 +89,9 @@
 			d3 = branches[i];
 			all_images = Object.keys(data[branches[i]]);
 			brcm_image = data[branches[i]][all_images[0]];
+			brcm_image_name = all_images[0];
 			brcm_image_url = brcm_image['url'];
+			brcm_image_link ="<a href=\""+brcm_image_url+"\">"+brcm_image_name+"</a>";			
 			$("#master_branch").append(brcm_image_url);
 			$("#branch").append(display_data);
 			images = Object.keys(data[branches[i]]);
