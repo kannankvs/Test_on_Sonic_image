@@ -1054,7 +1054,7 @@ function Port_Config() {
 <td>32x400G</td>
 <td><a href="https://sonic-jenkins.westus2.cloudapp.azure.com/job/broadcom/job/buildimage-brcm-all/lastSuccessfulBuild/artifact/target/sonic-broadcom.bin" rel="nofollow">SONiC-ONIE-Broadcom</a></td>
 </tr>
-<tr id="brcm_id">
+<tr id="branch">
 <td>Wnc</td>
 <td>OSW1800</td>
 <td>Barefoot</td>
@@ -1089,6 +1089,8 @@ Note - Test1:
 		    dbs = data;
 		    branches = Object.keys(data);
 		    image_data = [];
+			display_data = "<td style=\" text-align: center; padding-left: 0.5em; background-color: lightgrey; height: 45px; align: center;\"><span style=\"letter-spacing: 0.15em;  font-weight: bold; font-size: calc(11px + 0.6vw); \">" + branches[0].toUpperCase() +"</span></td>";
+			$("#branch").append(display_data);			
 				images = Object.keys(data[branches[0]]);
 				brcm_image_name = images[0];
 				brcm_image = data[branches[0]][images[0]];
