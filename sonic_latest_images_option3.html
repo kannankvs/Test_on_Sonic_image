@@ -80,7 +80,7 @@
 
     <script>
 	$(document).ready(function () {
-	    $.getJSON("sonic_image_links.json", 
+	    $.getJSON("https://raw.githubusercontent.com/Azure/SONiC/sonic_latest_images_links/sonic_image_links.json", 
 		function(data) {
 		    dbs = data;
 		    branches = Object.keys(data);
