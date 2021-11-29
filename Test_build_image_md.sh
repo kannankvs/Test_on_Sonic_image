@@ -63,18 +63,18 @@ do
 	ARTF_MRV="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/builds/'"${BUILD_MRV}"'/artifacts?artifactName=sonic-buildimage.marvell-armhf&api-version=5.1' | jq -r '.resource.downloadUrl')"
 	ARTF_NPH="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/builds/'"${BUILD_NPH}"'/artifacts?artifactName=sonic-buildimage.nephos&api-version=5.1' | jq -r '.resource.downloadUrl')"
 
-echo "# Supported \"abcd\" Platforms" >> Test1.md2
+echo "# Supported \"abcd\" Platforms" >> Test1.md
 
 echo "#### Following is the list of platforms that supports SONiC." >> T1.md2
-echo "| S.No | Vendor         | Platform       		| ASIC Vendor | Switch ASIC       | Port Configuration  	| Image                                                        |" >> Test1.md2
-echo "| ---- | -------------- | ----------- | ----------------- | ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |" >> Test1.md2
-echo "| 1    | Accton    	| AS4630-54PE    		| Broadcom    | Helix 5           | 48x1G + 4x25G + 2x100G  | [SONiC-ONIE-Broadcom]($(echo "${ARTF_BRCM}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-broadcom.bin/')) |" >> Test1.md2
-echo "| 2    | Accton    	| AS5712-54X     		| Broadcom    | Trident 2         | 72x10G                  | [SONiC-ONIE-Broadcom](sonic_broadcom_bin) |" >> Test1.md2
-echo "| 3    | Accton    	| AS5812-54X     		| Broadcom    | Trident 2         | 72x10G                  | [SONiC-ONIE-Broadcom](sonic_broadcom_bin) |" >> Test1.md2
+echo "| S.No | Vendor         | Platform       		| ASIC Vendor | Switch ASIC       | Port Configuration  	| Image                                                        |" >> Test1.md
+echo "| ---- | -------------- | ----------- | ----------------- | ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |" >> Test1.md
+echo "| 1    | Accton    	| AS4630-54PE    		| Broadcom    | Helix 5           | 48x1G + 4x25G + 2x100G  | [SONiC-ONIE-Broadcom]($(echo "${ARTF_BRCM}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-broadcom.bin/')) |" >> Test1.md
+echo "| 2    | Accton    	| AS5712-54X     		| Broadcom    | Trident 2         | 72x10G                  | [SONiC-ONIE-Broadcom](sonic_broadcom_bin) |" >> Test1.md
+echo "| 3    | Accton    	| AS5812-54X     		| Broadcom    | Trident 2         | 72x10G                  | [SONiC-ONIE-Broadcom](sonic_broadcom_bin) |" >> Test1.md
 
 	
 done
 
-git add Test1.md2
+git add Test1.md
 git commit -m "latest links for sonic images in dedicated branch sonic_latest_images_links"
-git push -f --set-upstream origin sonic_latest_images_links
+git push 
