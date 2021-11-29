@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 git checkout -b sonic_latest_images_links
-git config --global user.email "kannan_kvs@dell.com"
-git config --global user.name "kannankvs"
+git config --global user.email "xinxliu@microsoft.com"
+git config --global user.name "xinliu-seattle"
 git reset --hard
 git pull origin sonic_latest_images_links
 
@@ -19,13 +19,9 @@ DEFID_GRC="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definition
 DEFID_MRV="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions?name=Azure.sonic-buildimage.official.marvell-armhf' | jq -r '.value[0].id')"
 DEFID_NPH="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions?name=Azure.sonic-buildimage.official.nephos' | jq -r '.value[0].id')"
 
-echo '{' > Test1.md2
 first=1
 for BRANCH in  master   
 do
-	if [ -z "${first}" ]; then
-		echo ',' >> Test1.md2
-	fi
 	first=''
 	BUILD_BRCM="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/builds?definitions='"${DEFID_BRCM}"'&branchName=refs/heads/'"${BRANCH}"'&$top=1&resultFilter=succeeded&api-version=6.0' | jq -r '.value[0].id')"
 	BUILD_BRCM_TS="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/builds/'"${BUILD_BRCM}"'?api-version=6.0' | jq -r '.queueTime')"
@@ -76,88 +72,8 @@ echo "| 1    | Accton    	| AS4630-54PE    		| Broadcom    | Helix 5           |
 echo "| 2    | Accton    	| AS5712-54X     		| Broadcom    | Trident 2         | 72x10G                  | [SONiC-ONIE-Broadcom](sonic_broadcom_bin) |" >> Test1.md2
 echo "| 3    | Accton    	| AS5812-54X     		| Broadcom    | Trident 2         | 72x10G                  | [SONiC-ONIE-Broadcom](sonic_broadcom_bin) |" >> Test1.md2
 
-	echo "\"${BRANCH}\": {" >> Test1.md2
-	echo "\"sonic-broadcom.bin\": {" >> Test1.md2
-	echo "  \"url\": \"$(echo "${ARTF_BRCM}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-broadcom.bin/')\","  >> Test1.md2
-	echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_BRCM}&view=results\"," >> Test1.md2
-	echo "  \"build\": \"${BUILD_BRCM}\"," >> Test1.md2
-	echo "  \"date\": \"${BUILD_BRCM_TS}\"" >> Test1.md2
-	echo " }," >> Test1.md2
-	echo "\"sonic-aboot-broadcom.swi\": {" >> Test1.md2
-	echo "  \"url\": \"$(echo "${ARTF_BRCM}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-aboot-broadcom.swi/')\"," >> Test1.md2
-	echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_BRCM}&view=results\"," >> Test1.md2
-	echo "  \"build\": \"${BUILD_BRCM}\"," >> Test1.md2
-	echo "  \"date\": \"${BUILD_BRCM_TS}\"" >> Test1.md2
-	echo " }," >> Test1.md2
-	echo "\"sonic-mellanox.bin\": {" >> Test1.md2
-	echo "  \"url\": \"$(echo "${ARTF_MLNX}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-mellanox.bin/')\"," >> Test1.md2
-	echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_MLNX}&view=results\"," >> Test1.md2
-	echo "  \"build\": \"${BUILD_MLNX}\"," >> Test1.md2
-	echo "  \"date\": \"${BUILD_MLNX_TS}\"" >> Test1.md2
-	echo " }," >> Test1.md2
-	echo "\"sonic-vs.img.gz\": {" >> Test1.md2
-	echo "  \"url\": \"$(echo "${ARTF_VS}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-vs.img.gz/')\"," >> Test1.md2
-	echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_VS}&view=results\"," >> Test1.md2
-	echo "  \"build\": \"${BUILD_VS}\"," >> Test1.md2
-	echo "  \"date\": \"${BUILD_VS_TS}\"" >> Test1.md2
-	echo " }," >> Test1.md2
-	echo "\"sonic-innovium.bin\": {" >> Test1.md2
-	echo "  \"url\": \"$(echo "${ARTF_INNO}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-innovium.bin/')\"," >> Test1.md2
-	echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_INNO}&view=results\"," >> Test1.md2
-	echo "  \"build\": \"${BUILD_INNO}\"," >> Test1.md2
-	echo "  \"date\": \"${BUILD_INNO_TS}\"" >> Test1.md2
-	echo " }," >> Test1.md2
-	echo "\"sonic-innovium-dbg.bin\": {" >> Test1.md2
-	echo "  \"url\": \"$(echo "${ARTF_INNO}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-innovium-dbg.bin/')\"," >> Test1.md2
-	echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_INNO}&view=results\"," >> Test1.md2
-	echo "  \"build\": \"${BUILD_INNO}\"," >> Test1.md2
-	echo "  \"date\": \"${BUILD_INNO_TS}\"" >> Test1.md2	
-	echo " }," >> Test1.md2
-	echo "\"sonic-barefoot.bin\": {" >> Test1.md2
-	echo "  \"url\": \"$(echo "${ARTF_BFT}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-barefoot.bin/')\"," >> Test1.md2
-	echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_BFT}&view=results\"," >> Test1.md2
-	echo "  \"build\": \"${BUILD_BFT}\"," >> Test1.md2
-	echo "  \"date\": \"${BUILD_BFT_TS}\"" >> Test1.md2
-	echo " }," >> Test1.md2
-	echo "\"sonic-centec.bin\": {" >> Test1.md2
-	echo "  \"url\": \"$(echo "${ARTF_CTC}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-centec.bin/')\"," >> Test1.md2
-	echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_CTC}&view=results\"," >> Test1.md2
-	echo "  \"build\": \"${BUILD_CTC}\"," >> Test1.md2
-	echo "  \"date\": \"${BUILD_CTC_TS}\"" >> Test1.md2
-	echo " }," >> Test1.md2
-	echo "\"sonic-centec-arm64.bin\": {" >> Test1.md2
-	echo "  \"url\": \"$(echo "${ARTF_CTC64}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-centec-arm64.bin/')\"," >> Test1.md2
-	echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_CTC64}&view=results\"," >> Test1.md2
-	echo "  \"build\": \"${BUILD_CTC64}\"," >> Test1.md2
-	echo "  \"date\": \"${BUILD_CTC64_TS}\"" >> Test1.md2
-	echo " }," >> Test1.md2
-	echo "\"sonic-generic.bin\": {" >> Test1.md2
-	echo "  \"url\": \"$(echo "${ARTF_GRC}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-generic.bin/')\"," >> Test1.md2
-	echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_GRC}&view=results\"," >> Test1.md2
-	echo "  \"build\": \"${BUILD_GRC}\"," >> Test1.md2
-	echo "  \"date\": \"${BUILD_GRC_TS}\"" >> Test1.md2
-	echo " }," >> Test1.md2
-	echo "\"sonic-generic-dbg.bin\": {" >> Test1.md2
-	echo "  \"url\": \"$(echo "${ARTF_GRC}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-generic-dbg.bin/')\"," >> Test1.md2
-	echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_GRC}&view=results\"," >> Test1.md2
-	echo "  \"build\": \"${BUILD_GRC}\"," >> Test1.md2
-	echo "  \"date\": \"${BUILD_GRC_TS}\"" >> Test1.md2	
-	echo " }," >> Test1.md2
-	echo "\"sonic-marvell-armhf.bin\": {" >> Test1.md2
-	echo "  \"url\": \"$(echo "${ARTF_MRV}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-marvell-armhf.bin/')\"," >> Test1.md2
-	echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_MRV}&view=results\"," >> Test1.md2
-	echo "  \"build\": \"${BUILD_MRV}\"," >> Test1.md2
-	echo "  \"date\": \"${BUILD_MRV_TS}\"" >> Test1.md2
-	echo " }," >> Test1.md2
-	echo "\"sonic-nephos.bin\": {" >> Test1.md2
-	echo "  \"url\": \"$(echo "${ARTF_NPH}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-nephos.bin/')\"," >> Test1.md2
-	echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_NPH}&view=results\"," >> Test1.md2
-	echo "  \"build\": \"${BUILD_NPH}\"," >> Test1.md2
-	echo "  \"date\": \"${BUILD_NPH_TS}\"" >> Test1.md2
-	echo " }" >> Test1.md2
-	echo -n "}" >> Test1.md2
+	
 done
-echo "\n}" >> Test1.md2
 
 git add Test1.md2
 git commit -m "latest links for sonic images in dedicated branch sonic_latest_images_links"
