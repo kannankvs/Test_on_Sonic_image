@@ -70,11 +70,11 @@ do
 echo "# Supported \"abcd\" Platforms" >> Test1.md2
 
 echo "#### Following is the list of platforms that supports SONiC." >> T1.md2
-echo "\| S.No \| Vendor         \| Platform       		\| ASIC Vendor \| Switch ASIC       \| Port Configuration  	\| Image                                                        \|" >> Test1.md2
-echo "\| ---- \| -------------- \| ----------- \| ----------------- \| ----------------------- \| ------------------------------------------------------------ \| ------------------------------------------------------------ \|" >> Test1.md2
-echo "\| 1    \| Accton    	\| AS4630-54PE    		\| Broadcom    \| Helix 5           \| 48x1G + 4x25G + 2x100G  \| [SONiC-ONIE-Broadcom]($(echo "${ARTF_BRCM}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-broadcom.bin/')) \|" >> Test1.md2
-echo "\| 2    \| Accton    	\| AS5712-54X     		\| Broadcom    \| Trident 2         \| 72x10G                  \| [SONiC-ONIE-Broadcom](sonic_broadcom_bin) \|" >> Test1.md2
-echo "\| 3    \| Accton    	\| AS5812-54X     		\| Broadcom    \| Trident 2         \| 72x10G                  \| [SONiC-ONIE-Broadcom](sonic_broadcom_bin) \|" >> Test1.md2
+echo "| S.No | Vendor         | Platform       		| ASIC Vendor | Switch ASIC       | Port Configuration  	| Image                                                        |" >> Test1.md2
+echo "| ---- | -------------- | ----------- | ----------------- | ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |" >> Test1.md2
+echo "| 1    | Accton    	| AS4630-54PE    		| Broadcom    | Helix 5           | 48x1G + 4x25G + 2x100G  | [SONiC-ONIE-Broadcom]($(echo "${ARTF_BRCM}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-broadcom.bin/')) |" >> Test1.md2
+echo "| 2    | Accton    	| AS5712-54X     		| Broadcom    | Trident 2         | 72x10G                  | [SONiC-ONIE-Broadcom](sonic_broadcom_bin) |" >> Test1.md2
+echo "| 3    | Accton    	| AS5812-54X     		| Broadcom    | Trident 2         | 72x10G                  | [SONiC-ONIE-Broadcom](sonic_broadcom_bin) |" >> Test1.md2
 
 	echo "\"${BRANCH}\": {" >> Test1.md2
 	echo "\"sonic-broadcom.bin\": {" >> Test1.md2
