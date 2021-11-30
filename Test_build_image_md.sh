@@ -2,6 +2,7 @@
 git config --global user.email "kannan_kvs@dell.com"
 git config --global user.name "kannankvs"
 
+
 #set -euo pipefail
 
 DEFID_BRCM="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions?name=Azure.sonic-buildimage.official.broadcom' | jq -r '.value[0].id')"
