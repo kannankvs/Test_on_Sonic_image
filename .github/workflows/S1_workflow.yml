@@ -5,7 +5,7 @@ name: Run the Test_build_image_md.sh
 # Run the script once in a minute. Github may take 15 minutes to run this even though we request once in a minute, which is OK.
 on:
 schedule:
-    - cron:  '5 * * * *'
+    - cron:  '*/5 * * * *'
   push:
     branches: [ main ]
 
