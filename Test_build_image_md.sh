@@ -177,6 +177,6 @@ echo "| 106   | Wnc           | OSW1800        		| Barefoot    | Tofino         
 	
 done
 
-git add Test_build_image.md
+git commit Test_build_image.md
 git commit -m "latest links for sonic images in dedicated branch sonic_latest_images_links"
 git push 
