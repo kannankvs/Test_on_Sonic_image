@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+!/usr/bin/env bash
 git config --global user.email "kannan_kvs@dell.com"
 git config --global user.name "kannankvs"
 
@@ -61,7 +61,7 @@ do
 	ARTF_MRV="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/builds/'"${BUILD_MRV}"'/artifacts?artifactName=sonic-buildimage.marvell-armhf&api-version=5.1' | jq -r '.resource.downloadUrl')"
 	ARTF_NPH="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/builds/'"${BUILD_NPH}"'/artifacts?artifactName=sonic-buildimage.nephos&api-version=5.1' | jq -r '.resource.downloadUrl')"
 
-echo "# Supported Platforms" >> Test_build_image.md
+echo "# Supported Platforms" > Test_build_image.md
 
 echo "#### Following is the list of platforms that supports SONiC." >> Test_build_image.md
 echo "| S.No | Vendor         | Platform       		| ASIC Vendor | Switch ASIC       | Port Configuration  	| Image                                                        |" >> Test_build_image.md
