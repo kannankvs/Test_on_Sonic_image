@@ -5,7 +5,7 @@ name: Run the supported_devices_platforms_md.sh
 # Run the script once in a minute. Github may take 15 minutes to run this even though we request once in a minute, which is OK.
 on:
 schedule:
-    - cron:  '* * * * *'
+    - cron:  '1 * * * *'
 
 jobs:
   build:
