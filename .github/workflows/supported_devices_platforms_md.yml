@@ -6,6 +6,8 @@ name: Run the supported_devices_platforms_md.sh
 on:
 schedule:
     - cron:  '1 * * * *'
+  push:
+    branches: [ main ]
 
 jobs:
   build:
