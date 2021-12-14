@@ -1,10 +1,10 @@
 # This is a basic workflow to help you get started with GitHub Actions
 
-name: Run the Test_build_image_md.sh
+name: Run the shell script to generate sonic image links in Test_build_image_md.sh in a dedicated branch
 
 # Run the script once in a minute. Github may take 15 minutes to run this even though we request once in a minute, which is OK.
 on:
-schedule:
+  schedule:
     - cron:  '* * * * *'
 
 jobs:
