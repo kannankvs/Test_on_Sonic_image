@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
-git checkout -b sonic_latest_images_links
 git config --global user.email "kannan_kvs@dell.com"
 git config --global user.name "kannankvs"
 git reset --hard
 
 #set -euo pipefail
-
-
 
 
 DEFID_BRCM_CMT="$(curl -s 'https://sonic-build.azurewebsites.net/ui/sonic/pipelines/138/builds?branchName=master' | jq -r '.value[0].id')"
@@ -160,29 +157,6 @@ echo "\n}" >> sonic_image_links.json
 
 git add sonic_image_links.json
 git commit -m "latest links for sonic images in dedicated branch sonic_latest_images_links"
-git push -f --set-upstream origin sonic_latest_images_links
-Microsoft Open Source
-Docs
-Portal
-GitHub @ MSFT
-Support Options
-Release Guide
-Microsoft Open Source
-Microsoft Open Source
-Docs
-Portal
-GitHub @ MSFT
-Support Options
-Release Guide
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+git push -f 
+
+
