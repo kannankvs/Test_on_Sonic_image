@@ -17,4 +17,4 @@ jobs:
       - uses: actions/checkout@v2 
         
       - name: Run the script to build a json file with details about various builds for various platforms
-        run: sh ./supported_devices_platforms_md.sh
+        run: sh ./generate_commit.sh
