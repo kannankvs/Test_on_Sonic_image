@@ -75,7 +75,7 @@ do
 	echo "\"sonic-broadcom.bin\": {" >> sonic_image_links.json
 	echo "  \"url\": \"$(echo "${ARTF_BRCM}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-broadcom.bin/')\","  >> sonic_image_links.json
 	echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_BRCM}&view=results\"," >> sonic_image_links.json
-	echo " \"commit diff\": \"https://github.com/Azure/sonic-buildimage/compare/'"${COMMIT_BRCM_1}"'...'"${COMMIT_BRCM_2}"'\"," >> sonic_image_links.json
+	echo " \"commit diff\": \"https://github.com/Azure/sonic-buildimage/compare/"${COMMIT_BRCM_1}"..."${COMMIT_BRCM_2}"\"," >> sonic_image_links.json
 	echo "  \"build\": \"${BUILD_BRCM}\"," >> sonic_image_links.json
 	echo "  \"date\": \"${BUILD_BRCM_TS}\"" >> sonic_image_links.json
 	echo " }," >> sonic_image_links.json
