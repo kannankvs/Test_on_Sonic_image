@@ -68,14 +68,14 @@ do
 	ARTF_MRV="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/builds/'"${BUILD_MRV}"'/artifacts?artifactName=sonic-buildimage.marvell-armhf&api-version=5.1' | jq -r '.resource.downloadUrl')"
 	ARTF_NPH="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/builds/'"${BUILD_NPH}"'/artifacts?artifactName=sonic-buildimage.nephos&api-version=5.1' | jq -r '.resource.downloadUrl')"
 
-    COMMIT_BRCM_1="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/builds?definitions='"${DEFID_BRCM}"'&branchName=refs/heads/'"${BRANCH}"'&$top=1&resultFilter=succeeded&api-version=6.0 [dev.azure.com]' | jq -r '.value[0].sourceVersion')"
-    COMMIT_BRCM_2="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/builds?definitions='"${DEFID_BRCM}"'&branchName=refs/heads/'"${BRANCH}"'&$top=1&resultFilter=succeeded&api-version=6.0 [dev.azure.com]' | jq -r '.value[1].sourceVersion')"
+    COMMIT_BRCM_1="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/builds?definitions='"${DEFID_BRCM}"'&branchName=refs/heads/'"${BRANCH}"'&$top=2&resultFilter=succeeded&api-version=6.0' | jq -r '.value[0].sourceVersion')"
+    COMMIT_BRCM_2="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/builds?definitions='"${DEFID_BRCM}"'&branchName=refs/heads/'"${BRANCH}"'&$top=2&resultFilter=succeeded&api-version=6.0' | jq -r '.value[1].sourceVersion')"
 
 	echo "\"${BRANCH}\": {" >> sonic_image_links.json
 	echo "\"sonic-broadcom.bin\": {" >> sonic_image_links.json
 	echo "  \"url\": \"$(echo "${ARTF_BRCM}" | sed 's/format=zip/format=file\&subpath=\/target\/sonic-broadcom.bin/')\","  >> sonic_image_links.json
 	echo "  \"build-url\": \"https://dev.azure.com/mssonic/build/_build/results?buildId=${BUILD_BRCM}&view=results\"," >> sonic_image_links.json
-	echo " \"commit diff\": \"https://github.com/Azure/sonic-buildimage/compare/"${COMMIT_BRCM_1}"..."${COMMIT_BRCM_2}"\"," >> sonic_image_links.json
+	echo " \"commit diff\": \"https://github.com/Azure/sonic-buildimage/compare/'"${COMMIT_BRCM_1}"'...'"${COMMIT_BRCM_2}"'\"," >> sonic_image_links.json
 	echo "  \"build\": \"${BUILD_BRCM}\"," >> sonic_image_links.json
 	echo "  \"date\": \"${BUILD_BRCM_TS}\"" >> sonic_image_links.json
 	echo " }," >> sonic_image_links.json
