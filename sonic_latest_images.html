@@ -45,8 +45,8 @@
 					<div>
 						<div class="col-md-12">
 						
-								<h2 id="abcd_id"> Latest Successful BuildsWithAbcdIdVariable </h2>
-							<h2 id="master_branch"> Latest Successful BuildsWithMasterBranch </h2>
+								<h2> Latest Successful Builds </h2>
+						
 						</div>
 					</div>
 				</div>
@@ -67,7 +67,10 @@
 
 		</p>
 		<p class="mt-4">
-		    <a href="https://sonic-build.azurewebsites.net/ui/sonic/Pipelines">click here</a></span></td> for previous builds3 <br>
+		  <b> NOTE: </b> The 5 digit number given in the cells specifies the build Id of the images.
+		</p>
+		<p class="mt-4">
+		    <a  href="https://sonic-build.azurewebsites.net/ui/sonic/Pipelines">click here</a></span></td> for previous builds <br>
 		</p>
 
 		</p>
@@ -77,38 +80,33 @@
 
     <script>
 	$(document).ready(function () {
-	    $.getJSON("sonic_image_links.json", 
+	    $.getJSON("https://raw.githubusercontent.com/Azure/SONiC/sonic_latest_images_links/sonic_image_links.json", 
 		function(data) {
 		    dbs = data;
 		    branches = Object.keys(data);
 		    image_data = [];
-			d2 = "abcd8";
-			$("#abcd_id").append(d2);
-		    for (let i = branches.length - 1 ; i >= branches.length - 1; i--) {
+		    for (let i = branches.length - 1 ; i >= 0; i--) {
 			display_data = "<td style=\" text-align: center; padding-left: 0.5em; background-color: lightgrey; height: 45px; align: center;\"><span style=\"letter-spacing: 0.15em;  font-weight: bold; font-size: calc(11px + 0.6vw); \">" + branches[i].toUpperCase() +"</span></td>";
-			d3 = branches[i];
-			all_images = Object.keys(data[branches[i]]);
-			brcm_image = data[branches[i]][all_images[0]];
-			brcm_image_url = brcm_image['url'];
-			brcm_image_name = all_images[0];			
-			brcm_image_link ="<a href=\""+brcm_image_url+"\">"+brcm_image_name+"</a>";			
-			$("#master_branch").append(brcm_image_link);
 			$("#branch").append(display_data);
 			images = Object.keys(data[branches[i]]);
 			for (let j = 0; j < images.length; j++) {
 			    image_name = images[j];
-			    image = data[branches[i]][images[j]];
+				image = data[branches[i]][images[j]];
 			    image_platform = image_name.split(".")[0];
-			    if(image_platform.length == 1){
+			    image_platform2 = image_name;
+				if(image_platform.length == 1){
 				platform = ""
 			    }else{
 				platform = image_platform.split("sonic-")[1];
+				platform2 = image_platform2.split("sonic-")[1];
 				if(platform.length == 1){
 				    platform = ""
 				}
 			    }
 			    image_avail = true;
 			    image_url = image['url'];
+				build_id = image['build'];
+				commit_diff = commit['diff'];
 			    if(image_url === 'null' || image_url === ""){
 				image_avail = false;
 			    }
@@ -117,7 +115,7 @@
 				$("#disp_table").append(platform_column);
 			    }
 			    if (image_avail)
-				image_column ="<td style=\"text-align: center;\"><span style=\"color: #0000ff;\"><a href=\""+ image_url +"\">"+image_name+"</a></span></td>";
+				image_column ="<td style=\"text-align: center;\"><span style=\"color: #0000ff;\"><a href=\""+ image_url +"\">"+platform2+"-"+build_id+"</a></span></td>";
 			    else
 				image_column ="<td style=\"text-align: center;\"><span style=\"color: #0000ff;\">N/A</span></td>";
 
