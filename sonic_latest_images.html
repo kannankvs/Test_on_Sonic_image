@@ -81,7 +81,7 @@
 
     <script>
 	$(document).ready(function () {
-	    $.getJSON("https://github.com/Azure/kannankvs/Test2/blob/main/sonic_image_links.json", 
+	    $.getJSON("https://raw.githubusercontent.com/Azure/SONiC/sonic_latest_images_links/sonic_image_links.json", 
 		function(data) {
 		    dbs = data;
 		    branches = Object.keys(data);
@@ -95,7 +95,7 @@
 				image = data[branches[i]][images[j]];
 			    image_platform = image_name.split(".")[0];
 			    image_platform2 = image_name;
-			    if(image_platform.length == 1){
+				if(image_platform.length == 1){
 				platform = ""
 			    }else{
 				platform = image_platform.split("sonic-")[1];
@@ -107,6 +107,7 @@
 			    image_avail = true;
 			    image_url = image['url'];
 				build_id = image['build'];
+				commit_id = commit['diff'];
 			    if(image_url === 'null' || image_url === ""){
 				image_avail = false;
 			    }
