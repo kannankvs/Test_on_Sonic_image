@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
+git checkout -b sonic_latest_images_links
 git config --global user.email "kannan_kvs@dell.com"
 git config --global user.name "kannankvs"
 git reset --hard
+git pull origin sonic_latest_images_links
 
 #set -euo pipefail
 
@@ -189,6 +191,6 @@ echo "\n}" >> sonic_image_links.json
 
 git add sonic_image_links.json
 git commit -m "latest links for sonic images in dedicated branch sonic_latest_images_links"
-git push -f 
+git push -f --set-upstream origin sonic_latest_images_links
 
 
