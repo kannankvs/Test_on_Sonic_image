@@ -300,3 +300,147 @@
     </div>
   </section>
   <!-- End More Videos -->
+  
+  <!-- Start latest course section -->
+  
+  
+		    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+
+              <h2 style="color: #01BAFD; text-align:center;" >SONiC Fund Members </h2>
+              <!-- <p style="color: black; font-size: 18px" >Rapid innovation in silicon, CPU, power, port density, optics and speed while preserving in one unified software solution across multiple platforms!</p> -->
+            </div>
+			<p style="padding-left: 0.5em; padding-bottom: 0.5em; vertical-align: center; line-height: 0.5m font-weight: bold; "> The SONiC Fund supports the activities of the SONiC Foundation. For information or to join the SONiC Fund, please click <span style="color: blue;"><a href="https://enrollment.lfx.linuxfoundation.org/?project=sonicfund"><font color="#6F65F3" >here.</font></a></span> </p>
+             <center><img style="height: auto; text-align:center; width: 80%;" alt="img" src="assets/img/sonic_fund_1.jpg"></center>
+	<!-- End Title -->
+<br>
+<br>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+
+              <h2 style="color: #01BAFD; text-align:center;" >Contributing Organizations </h2>
+              <!-- <p style="color: black; font-size: 18px" >Rapid innovation in silicon, CPU, power, port density, optics and speed while preserving in one unified software solution across multiple platforms!</p> -->
+            </div>
+            <!-- End Title -->
+                         <center><img style="height: auto; text-align:center; width: 80%;" alt="img" src="assets/img/all_partners2_1920x1320.jpg"></center>
+
+      </div>
+    </div>
+
+  <!-- End latest course section -->
+ 
+  <!-- Start footer -->
+  <footer id="mu-footer"> 
+    <!-- start footer top -->
+    <div class="mu-footer-top">
+      <div class="container">
+        <div class="mu-footer-top-area">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="mu-footer-widget">
+                <h4>Mailing List</h4>
+                <p>sonicproject@googlegroups.com, click <a target="_blank" href="https://groups.google.com/forum/#!forum/sonicproject"><font color="#6F65F3" size="3">here</font></a> to join</p>             
+              </div>
+            </div>		  
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="mu-footer-widget">
+                <h4 style="margin-left: 40px" >Slack</h4>
+                <ul>
+                  <li style="margin-top: -4px; margin-left: 40px"><a target="_blank" href="https://sonicswitch.slack.com/">Slack Discussion Group</a></li>                
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="mu-footer-widget">
+                <h4><span class="fa fa-twitter"></span></h4>
+                <ul>
+                  <p>#SONiC_and_SAI</p>
+                </ul>				
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end footer top -->
+    <!-- start footer bottom -->
+    <div class="mu-footer-bottom">
+      <div class="container">
+        <div class="mu-footer-bottom-area">
+          <p>&copy; Copyright © The Linux Foundation®. SONiC and SONiC Foundation are trademarks of The Linux Foundation. For web site terms of use, trademark usage and other project policies please  <a href="https://linuxfoundation.org/policies/" rel="nofollow"><font color="#6F65F3" >click here</font></a></p>
+        </div>
+      </div>
+    </div>
+    <!-- end footer bottom -->
+  </footer>
+
+
+
+  <!-- jQuery library -->
+  <script src="assets/js/jquery.min.js"></script>  
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="assets/js/bootstrap.js"></script>   
+  <!-- Slick slider -->
+  <script type="text/javascript" src="assets/js/slick.js"></script>
+  <!-- Counter -->
+  <script type="text/javascript" src="assets/js/waypoints.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.counterup.js"></script>  
+  <!-- Mixit slider -->
+  <script type="text/javascript" src="assets/js/jquery.mixitup.js"></script>
+  <!-- Add fancyBox -->        
+  <script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
+  
+      <script type = "application/javascript">
+         function loadJSON() {
+            var data_file = "https://api.github.com/repos/kannankvs/sonic-buildimage";
+            var http_request = new XMLHttpRequest();
+            try{
+               // Opera 8.0+, Firefox, Chrome, Safari
+               http_request = new XMLHttpRequest();
+            }catch (e) {
+               // Internet Explorer Browsers
+               try{
+                  http_request = new ActiveXObject("Msxml2.XMLHTTP");
+					
+               }catch (e) {
+				
+                  try{
+                     http_request = new ActiveXObject("Microsoft.XMLHTTP");
+                  }catch (e) {
+                     // Something went wrong
+                     alert("Your browser broke!");
+                     return false;
+                  }
+					
+               }
+            }
+			
+            http_request.onreadystatechange = function() {
+			
+               if (http_request.readyState == 4  ) {
+                  // Javascript function JSON.parse to parse JSON data
+                  var jsonObj = JSON.parse(http_request.responseText);
+
+                  // jsonObj variable now contains the data structure and can
+                  // be accessed as jsonObj.name and jsonObj.country.
+				  
+               }
+            }
+			
+            http_request.open("GET", data_file, true);
+            http_request.send();
+         }
+		
+      </script>
+  <!-- Custom js -->
+  <script src="assets/js/custom.js"></script> 
+
+  </body>
+  <!--  
+   Copyright © The Linux Foundation®.  SONiC and SONiC Foundation are trademarks of The Linux Foundation. For web site terms of use, trademark usage and other project policies please see https://linuxfoundation.org/policies/. 
+  -->
+</html>
