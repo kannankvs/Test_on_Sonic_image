@@ -1113,8 +1113,9 @@ Note:
 </p>
 	
 <script>
-var vendor_data = document.getElementById("Intel").name = "Barefoot";
+
 	var vendor_data = {Broadcom:"", Cavium:"", Nephos:"", Barefoot:"", Innovium:"", Centec:"", Marvell:"", Nvidia:""};
+	var vendor_data = document.getElementById("Intel").name = "Barefoot";
 	$(document).ready(function () {
 	    $.getJSON("sonic_image_links.json", 
 		function(data) {
