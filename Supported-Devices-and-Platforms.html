@@ -1111,7 +1111,16 @@ Note:
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </p>
-	var vendor_data = document.getElementById("Barefoot").name = "Intel";
+
+<script>
+function display() {
+  var vendor_data = document.getElementById("Intel").name;
+}
+function change() {
+  var x = document.getElementById("Intel").name = "Barefoot";
+}
+</script>
+
 <script>
 
 	var vendor_data = {Broadcom:"", Cavium:"", Nephos:"", Barefoot:"", Innovium:"", Centec:"", Marvell:"", Nvidia:""};
