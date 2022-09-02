@@ -145,10 +145,12 @@ function myFunction() {
 function ASIC_Vendor() {
   // Declare variables
   var input, filter, table, tr, td, i, txtValue;
+  document.getElementById("Intel").name = "Barefoot";
   input = document.getElementById("myInput2");
   filter = input.value.toUpperCase();
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
+  
 
   // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
@@ -1113,9 +1115,8 @@ Note:
 </p>
 
 <script>
-
-    
-	var vendor_data = {Broadcom:"", Cavium:"", Nephos:"", Barefoot:"", Innovium:"", Centec:"", Marvell:"", Nvidia:""};
+	
+    var vendor_data = {Broadcom:"", Cavium:"", Nephos:"", Barefoot:"", Innovium:"", Centec:"", Marvell:"", Nvidia:""};
 		
 	$(document).ready(function () {
 	    $.getJSON("sonic_image_links.json", 
