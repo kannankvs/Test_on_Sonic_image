@@ -1114,16 +1114,9 @@ Note:
 
 <script>
 
-<script>
-function display() {
-  var vendor_data = document.getElementById("Intel").name;
-}
-function change() {
-  var x = document.getElementById("Intel").name = "Barefoot";
-}
-</script>
-
-	var vendor_data = {Broadcom:"", Cavium:"", Nephos:"", Barefoot:"", Innovium:"", Centec:"", Marvell:"", Nvidia:""};
+    
+	var vendor_data = {Broadcom:"", Cavium:"", Nephos:"", Intel:"", Innovium:"", Centec:"", Marvell:"", Nvidia:""};
+	var vendor_data = content.replace("Intel", Barefoot);
 	
 	$(document).ready(function () {
 	    $.getJSON("sonic_image_links.json", 
