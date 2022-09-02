@@ -152,6 +152,19 @@ function ASIC_Vendor() {
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
   
+  
+for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td) {
+      td.textContent = document.getElementById("Intel").name = "Barefoot";
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }  
+    }
+  }
 
   // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
@@ -170,7 +183,6 @@ function Switch_ASIC() {
   // Declare variables
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput3");
-  var asic_vendor = content.replace("Intel", Barefoot);
   filter = input.value.toUpperCase();
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
@@ -1176,7 +1188,7 @@ Note:
 		    }
 			
 		    var table = document.getElementById("data_table").children;
-		    for (var i = 0; i < table.length; i++) {
+			for (var i = 0; i < table.length; i++) {
 			vdata = table[i].children[2].textContent;
 			if (vdata == "Nvidia")
 			    vdata = "Mellanox";
