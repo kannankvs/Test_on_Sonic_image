@@ -125,10 +125,10 @@ function myFunction() {
   // Declare variables
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
-  var asic_vendor = content.replace("Intel", Barefoot);
   filter = input.value.toUpperCase();
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
+  myInput = document.getElementById("Intel").name = "Barefoot";
 
   // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
@@ -147,7 +147,6 @@ function ASIC_Vendor() {
   // Declare variables
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput2");
-  var asic_vendor = content.replace("Intel", Barefoot);
   filter = input.value.toUpperCase();
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
@@ -156,7 +155,6 @@ function ASIC_Vendor() {
 for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[2];
     if (td) {
-      td.textContent = document.getElementById("Intel").name = "Barefoot";
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
         tr[i].style.display = "";
@@ -204,7 +202,6 @@ function Port_Config() {
   // Declare variables
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput4");
-  var asic_vendor = content.replace("Intel", Barefoot);
   filter = input.value.toUpperCase();
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
