@@ -1174,12 +1174,13 @@ Note:
 			    }
 			    if (image_avail)
 				image_column ="<td style=\"text-align: center;\"><span style=\"color: #0000ff;\"><a href=\""+ image_url +"\">"+image_name+"</a></span></td>";
+				vendor_data[vendor] = "ABCD";
 			    else
 				image_column ="<td style=\"text-align: center;\"><span style=\"color: #0000ff;\">N/A</span></td>";
 			    if(platform != ""){
 				vendor = platform.charAt(0).toUpperCase() + platform.slice(1);
 				vendor_data[vendor] = image_column;
-				vendor_data[vendor] = "ABCD";
+				
 				}
 
 			}
