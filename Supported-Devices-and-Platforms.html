@@ -1165,6 +1165,7 @@ Note:
 			    image_avail = true;
 			    image_url = image['url'];
 			    if(image_url === 'null' || image_url === ""){
+				vendor_data[vendor] = "ABCD";
 				image_avail = false;
 			    }
 				
@@ -1174,8 +1175,7 @@ Note:
 			    }
 			    if (image_avail)
 				image_column ="<td style=\"text-align: center;\"><span style=\"color: #0000ff;\"><a href=\""+ image_url +"\">"+image_name+"</a></span></td>";
-				vendor_data[vendor] = "ABCD";
-			    else
+				else
 				image_column ="<td style=\"text-align: center;\"><span style=\"color: #0000ff;\">N/A</span></td>";
 			    if(platform != ""){
 				vendor = platform.charAt(0).toUpperCase() + platform.slice(1);
@@ -1201,6 +1201,7 @@ Note:
 			    table[i].children[5].innerHTML = "<td style=\"text-align: center;\"><span style=\"color: #0000ff;\">N/A</span></td>";
 			else
 				table[i].children[5].innerHTML = vendor_data[vdata];
+				
 			    
 			}
 		    
