@@ -1165,7 +1165,6 @@ Note:
 			    image_avail = true;
 			    image_url = image['url'];
 			    if(image_url === 'null' || image_url === ""){
-				vendor_data[vendor] = "ABCD";
 				image_avail = false;
 			    }
 				
@@ -1201,6 +1200,7 @@ Note:
 			    table[i].children[5].innerHTML = "<td style=\"text-align: center;\"><span style=\"color: #0000ff;\">N/A</span></td>";
 			else
 				table[i].children[5].innerHTML = vendor_data[vdata];
+				vendor_data[vendor] = "ABCD";
 				
 			    
 			}
