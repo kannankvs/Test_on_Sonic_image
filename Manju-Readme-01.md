@@ -13,7 +13,7 @@ Details on the inputs to be provided to generate information to design or update
 
 | Key        | Type                      | Support               |Description                                             | 
 |------------|---------------------------|------------------------|--------------------------------------------------------|
-| ``site_name``            | string        |  Recommended | Site name // to be used  |
+| ``site_name``            | string        |  Recommended | Site name <br/> to be used  |
 | ``switch_cli_password`` | string           |  Required | cli password |
 | ``management_network``    | string           |  Required | Management network to provide IPs for all devices in inventory |
 | ``management_gateway``       | string        |  Required | Management gateway |
