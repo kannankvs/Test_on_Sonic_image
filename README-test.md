@@ -88,19 +88,19 @@ Step 1: Validates inputs provided; Generates hostname and IPs, ansible variables
 
 Step 2: Put devices in ONIE so that DHCP is triggered and devices come up in the required sonic image and ztp configs
 
-        ```ansible-playbook playbooks/install_image.yaml -e "target_os=ONIE"```
+```ansible-playbook playbooks/install_image.yaml -e "target_os=ONIE"```
 
 Step 3: Set Day0 common configs for all devices (hostname, ntp, snmp, tacacs+/radius, syslog, banner, interface naming mode)
 
-        ```ansible-playbook playbooks/config_Day0.yml```
+```ansible-playbook playbooks/config_Day0.yml```
 
 Step 4: Validation Playbooks
 
-        ```ansible-playbook validate_reachability.yaml```
-        ```ansible-playbook validate_ztp_status.yaml```
-        ```ansible-playbook validate_os_type.yaml```
-        ```ansible-playbook validate_device_type.yaml```
-        ```ansible-playbook validate_version.yaml```
+```ansible-playbook validate_reachability.yaml
+ansible-playbook validate_ztp_status.yaml
+ansible-playbook validate_os_type.yaml
+ansible-playbook validate_device_type.yaml
+ansible-playbook validate_version.yaml```
 
 **Note** Detailed info of playbooks/roles/modules used [README-playbooks.md](README-playbooks.md)
 
