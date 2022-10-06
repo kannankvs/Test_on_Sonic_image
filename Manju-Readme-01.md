@@ -60,4 +60,6 @@ Details on the inputs to be provided to generate information to design or update
 | ``default_lease_time``    | integer           | ``600`` | default lease time to be configured in dhcpd.conf |
 | ``interface_naming``       | string        | ``standard`` | interface_naming to be used |
 
-Sample: [fabric.json](input/fabric.json)
+Sample: 
+[fabric.json](input/fabric.json)
+[pods.json](input/pods.json)
