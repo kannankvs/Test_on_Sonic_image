@@ -53,11 +53,11 @@ Details on the inputs to be provided to generate information to design or update
 
 **defaults.json**
 
-| Key        | Type                      | Support               | Default               | Description                                             |
-|------------|---------------------------|-----------------------|-----------------------|---------------------------------------------------------|
-| ``switch_cli_user``            | string        | Required |  ``admin`` | cli user name. |
-| ``max_lease_time`` | integer           | Required |  ``7200`` | Max lease time to be configured in dhcpd.conf |
-| ``default_lease_time``    | integer           | Required |  ``600`` | default lease time to be configured in dhcpd.conf |
-| ``interface_naming``       | string        | Required |  ``standard`` | interface_naming to be used |
+| Key        | Type                      | Default               | Description                                             |
+|------------|---------------------------|-----------------------|---------------------------------------------------------|
+| ``switch_cli_user``            | string        | ``admin`` | cli user name. |
+| ``max_lease_time`` | integer           | ``7200`` | Max lease time to be configured in dhcpd.conf |
+| ``default_lease_time``    | integer           | ``600`` | default lease time to be configured in dhcpd.conf |
+| ``interface_naming``       | string        | ``standard`` | interface_naming to be used |
 
 Sample: [fabric.json](input/fabric.json)
