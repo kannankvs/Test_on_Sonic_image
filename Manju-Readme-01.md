@@ -48,7 +48,7 @@ Details on the inputs to be provided to generate information to design or update
 
 | Key        | Type                      | Support               | Description                                             |
 |------------|---------------------------|-----------------------|-------------------------------------------------------|
-| ``inventory.switches``            | list of dictionary       | Required | List of switches |
+| ``inventory.switches``            | list of dictionary       | Required | List of switches. <br/> - ``id`` integer, Required, unique Id starting with 1 <br/> - ``podId`` integer, Optional, Pod Id. Must be provided for leafs/spines <br/> - ``rackId`` integer, Optional, Rack Id. Must be provided for leafs <br/> - ``switchId`` integer, Required, switch Id. To identify the switch within a rack/spine/superspine. <br/> - ``role`` string, Required, "LEAF" or "SPINE" or "SUPERSPINE" <br/> - ``mac`` string, Required, MAC Address |
 
 
 **defaults.json**
