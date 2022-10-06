@@ -96,7 +96,8 @@ Step 3: Set Day0 common configs for all devices (hostname, ntp, snmp, tacacs+/ra
 
 Step 4: Validation Playbooks
 
-```ansible-playbook validate_reachability.yaml
+```
+ansible-playbook validate_reachability.yaml
 ansible-playbook validate_ztp_status.yaml
 ansible-playbook validate_os_type.yaml
 ansible-playbook validate_device_type.yaml
