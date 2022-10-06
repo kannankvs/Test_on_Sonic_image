@@ -100,7 +100,8 @@ Step 4: Validation Playbooks
 ansible-playbook validate_ztp_status.yaml
 ansible-playbook validate_os_type.yaml
 ansible-playbook validate_device_type.yaml
-ansible-playbook validate_version.yaml```
+ansible-playbook validate_version.yaml
+```
 
 **Note** Detailed info of playbooks/roles/modules used [README-playbooks.md](README-playbooks.md)
 
