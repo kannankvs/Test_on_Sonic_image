@@ -61,5 +61,7 @@ Details on the inputs to be provided to generate information to design or update
 | ``interface_naming``       | string        | ``standard`` | interface_naming to be used |
 
 Sample: 
+
 [fabric.json](input/fabric.json)
+
 [pods.json](input/pods.json)
