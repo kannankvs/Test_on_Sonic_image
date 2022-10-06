@@ -41,7 +41,7 @@ Details on the inputs to be provided to generate information to design or update
 | ``spines_per_pod``                  | integer            | Required | Number of spines for each pod |
 | ``leafs_per_rack``                 | integer           | Required | Number of leafs per rack |
 | ``no_of_pods``           | integer           | Required | Number of pods supported  |
-| ``pods``               | list        | Required | Details of each pod. Refer Note below |
+| ``pods``               | list        | Required | Details of each pod. <br/> - ``id`` integer, Required, unique Pod Id starting with 1 <br/> - ``name`` string, Required, Pod name <br/> - ``noOfRacks`` integer, Required, Number of racks supported per Pod |
 
 **Note: pods** 
 List of dictionary with each dictionary containing id, name, noOfRacks for each pod
