@@ -62,3 +62,4 @@ List of dictionary with each dictionary containing id, name, noOfRacks for each 
 | ``default_lease_time``    | integer           | Required |  ``600`` | default lease time to be configured in dhcpd.conf |
 | ``interface_naming``       | string        | Required |  ``standard`` | interface_naming to be used |
 
+Sample: [fabric.json](input/fabric.json)
