@@ -84,7 +84,7 @@ Details of inputs to be provided with example [README-inputs.md](README-inputs.m
 
 Step 1: Validates inputs provided; Generates hostname and IPs, ansible variables/inventory, dhcp/ztp configs
 
-        ```ansible-playbook playbooks/config_preDay0.yml```
+```ansible-playbook playbooks/config_preDay0.yml```
 
 Step 2: Put devices in ONIE so that DHCP is triggered and devices come up in the required sonic image and ztp configs
 
