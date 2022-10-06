@@ -29,17 +29,6 @@ Details on the inputs to be provided to generate information to design or update
 | ``radius``                 | dictionary          |  Optional | Configures the radius server. Refer enterprise_sonic resource module for format. |
 | ``leaf_uplinks``           | list           |  Required | Configures the leaf uplinks  |
 
-**Note: hostname_format** 
-- User can provide the hostname for any switch in the inventory input. 
-- If hostname is not provided in input, the playbook generates hostname based on hostname_format. hostname_format is a string format with keywords within curly braces ``{}``. The keywords will be replaced with actual values. The format should be able to generate hostnames that uniquely identifies each device. 
-- Keywords that can be used within the ``{}`` in the format: ``site_code, role, pod_id, pod_name, rack_id, switch_id``. 
-- If hostname_format is not provided, the default 
-``{site_code}-{role}-p{pod_id}r{rack_id}sw{switch_id}`` will be used. 
-Ex: ``sjc-leaf-p003r4sw01``, where sjc is the site_code, role is leaf, pod_num is 03, rack nmber is 04, switch number is  01. 
-- If there is only one pod, following format can be used.
-``{site_code}-{role}-r{rack_id}sw{switchid}``
-Ex: ``sjc-lf-r04sw01`` If site_code is not requried, use the following format. "{role}-p{pod_id}r{rack_id}sw{switchid}" Ex: leaf-p03r04sw01
-
 
 **pods.json**
 
