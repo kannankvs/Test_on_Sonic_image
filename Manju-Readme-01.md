@@ -13,7 +13,7 @@ Details on the inputs to be provided to generate information to design or update
 
 | Key        | Type                      | Support               |Description                                             | 
 |------------|---------------------------|------------------------|--------------------------------------------------------|
-| ``site_name``            | string        |  Recommended | Site name <br/> to be used  |
+| ``site_name``            | string        |  Recommended | Site name to be used  |
 | ``switch_cli_password`` | string           |  Required | cli password |
 | ``management_network``    | string           |  Required | Management network to provide IPs for all devices in inventory |
 | ``management_gateway``       | string        |  Required | Management gateway |
@@ -27,7 +27,7 @@ Details on the inputs to be provided to generate information to design or update
 | ``ntp``       | dictionary        |  Optional | Configures the ntp. Refer enterprise_sonic resource module for format. |
 | ``logging``                  | dictionary            |  Optional | Configures the logging server. Refer enterprise_sonic resource module for format. |
 | ``radius``                 | dictionary          |  Optional | Configures the radius server. Refer enterprise_sonic resource module for format. |
-| ``leaf_uplinks``           | list           |  Required | Configures the leaf uplinks  |
+| ``leaf_uplinks``           | list of string           |  Required | Configures the leaf uplinks  |
 
 
 **pods.json**
@@ -41,16 +41,14 @@ Details on the inputs to be provided to generate information to design or update
 | ``spines_per_pod``                  | integer            | Required | Number of spines for each pod |
 | ``leafs_per_rack``                 | integer           | Required | Number of leafs per rack |
 | ``no_of_pods``           | integer           | Required | Number of pods supported  |
-| ``pods``               | list        | Required | Details of each pod. <br/> - ``id`` integer, Required, unique Pod Id starting with 1 <br/> - ``name`` string, Required, Pod name <br/> - ``noOfRacks`` integer, Required, Number of racks supported per Pod |
+| ``pods``               | list of dictionary       | Required | Details of each pod. <br/> - ``id`` integer, Required, unique Pod Id starting with 1 <br/> - ``name`` string, Required, Pod name <br/> - ``noOfRacks`` integer, Required, Number of racks supported per Pod |
 
-**Note: pods** 
-List of dictionary with each dictionary containing id, name, noOfRacks for each pod
 
 **inventory.json**
 
 | Key        | Type                      | Support               | Description                                             |
 |------------|---------------------------|-----------------------|-------------------------------------------------------|
-| ``inventory.switches``            | list        | Required | List of switches |
+| ``inventory.switches``            | list of dictionary       | Required | List of switches |
 
 
 **defaults.json**
