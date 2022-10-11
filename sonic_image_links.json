@@ -50,11 +50,11 @@
   "date": "2022-10-09T08:00:25.9686585Z"
  },
 "sonic-centec.bin": {
-  "url": "https://artprodcus3.artifacts.visualstudio.com/Af91412a5-a906-4990-9d7c-f697b81fc04d/be1b070f-be15-4154-aade-b1d3bfb17054/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL21zc29uaWMvcHJvamVjdElkL2JlMWIwNzBmLWJlMTUtNDE1NC1hYWRlLWIxZDNiZmIxNzA1NC9idWlsZElkLzE1ODM3NC9hcnRpZmFjdE5hbWUvc29uaWMtYnVpbGRpbWFnZS5jZW50ZWM1/content?format=file&subpath=/target/sonic-centec.bin",
-  "build-url": "https://dev.azure.com/mssonic/build/_build/results?buildId=158374&view=results",
- "diff": "https://github.com/Azure/sonic-buildimage/compare/615f277701a850ea8b66fa298df2cc0200c5f443...615f277701a850ea8b66fa298df2cc0200c5f443",
-  "build": "158374",
-  "date": "2022-10-09T08:00:33.3284212Z"
+  "url": "https://artprodcus3.artifacts.visualstudio.com/Af91412a5-a906-4990-9d7c-f697b81fc04d/be1b070f-be15-4154-aade-b1d3bfb17054/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL21zc29uaWMvcHJvamVjdElkL2JlMWIwNzBmLWJlMTUtNDE1NC1hYWRlLWIxZDNiZmIxNzA1NC9idWlsZElkLzE1OTI0My9hcnRpZmFjdE5hbWUvc29uaWMtYnVpbGRpbWFnZS5jZW50ZWM1/content?format=file&subpath=/target/sonic-centec.bin",
+  "build-url": "https://dev.azure.com/mssonic/build/_build/results?buildId=159243&view=results",
+ "diff": "https://github.com/Azure/sonic-buildimage/compare/615f277701a850ea8b66fa298df2cc0200c5f443...cb707b7969c8f3f34d7134a661c7a6ca3f076d3b",
+  "build": "159243",
+  "date": "2022-10-11T08:00:32.2108003Z"
  },
 "sonic-centec-arm64.bin": {
   "url": "https://artprodcus3.artifacts.visualstudio.com/Af91412a5-a906-4990-9d7c-f697b81fc04d/be1b070f-be15-4154-aade-b1d3bfb17054/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL21zc29uaWMvcHJvamVjdElkL2JlMWIwNzBmLWJlMTUtNDE1NC1hYWRlLWIxZDNiZmIxNzA1NC9idWlsZElkLzE1OTIyNS9hcnRpZmFjdE5hbWUvc29uaWMtYnVpbGRpbWFnZS5jZW50ZWMtYXJtNjQ1/content?format=file&subpath=/target/sonic-centec-arm64.bin",
@@ -82,7 +82,7 @@
   "build-url": "https://dev.azure.com/mssonic/build/_build/results?buildId=159241&view=results",
  "diff": "https://github.com/Azure/sonic-buildimage/compare/62692f4228b2f6652c0ab736c863ef9cc32c77bd...cb707b7969c8f3f34d7134a661c7a6ca3f076d3b",
   "build": "159241",
-  "date": "2022-10-11T08:00:31.9295347Z"
+  "date": ""
  },
 "sonic-nephos.bin": {
   "url": "",
