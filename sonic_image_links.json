@@ -1,14 +1,14 @@
 {
 "master": {
 "sonic-broadcom.bin": {
-  "url": "",
+  "url": "https://artprodcus3.artifacts.visualstudio.com/Af91412a5-a906-4990-9d7c-f697b81fc04d/be1b070f-be15-4154-aade-b1d3bfb17054/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL21zc29uaWMvcHJvamVjdElkL2JlMWIwNzBmLWJlMTUtNDE1NC1hYWRlLWIxZDNiZmIxNzA1NC9idWlsZElkLzE3MDE0Ni9hcnRpZmFjdE5hbWUvc29uaWMtYnVpbGRpbWFnZS5icm9hZGNvbQ2/content?format=file&subpath=/target/sonic-broadcom.bin",
   "build-url": "https://dev.azure.com/mssonic/build/_build/results?buildId=170146&view=results",
  "diff": "https://github.com/Azure/sonic-buildimage/compare/d7a9f18d1840d39b423d42f9e8e636d79b1895de...61a085e55e72cf2c28ed74004a266fad2b2858b7",
   "build": "170146",
   "date": "2022-11-05T08:00:24.7655074Z"
  },
 "sonic-aboot-broadcom.swi": {
-  "url": "",
+  "url": "https://artprodcus3.artifacts.visualstudio.com/Af91412a5-a906-4990-9d7c-f697b81fc04d/be1b070f-be15-4154-aade-b1d3bfb17054/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL21zc29uaWMvcHJvamVjdElkL2JlMWIwNzBmLWJlMTUtNDE1NC1hYWRlLWIxZDNiZmIxNzA1NC9idWlsZElkLzE3MDE0Ni9hcnRpZmFjdE5hbWUvc29uaWMtYnVpbGRpbWFnZS5icm9hZGNvbQ2/content?format=file&subpath=/target/sonic-aboot-broadcom.swi",
   "build-url": "https://dev.azure.com/mssonic/build/_build/results?buildId=170146&view=results",
  "diff": "https://github.com/Azure/sonic-buildimage/compare/d7a9f18d1840d39b423d42f9e8e636d79b1895de...61a085e55e72cf2c28ed74004a266fad2b2858b7",
   "build": "170146",
@@ -389,7 +389,7 @@
 "sonic-mellanox.bin": {
   "url": "https://artprodcus3.artifacts.visualstudio.com/Af91412a5-a906-4990-9d7c-f697b81fc04d/be1b070f-be15-4154-aade-b1d3bfb17054/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL21zc29uaWMvcHJvamVjdElkL2JlMWIwNzBmLWJlMTUtNDE1NC1hYWRlLWIxZDNiZmIxNzA1NC9idWlsZElkLzE3MDUyOS9hcnRpZmFjdE5hbWUvc29uaWMtYnVpbGRpbWFnZS5tZWxsYW5veA2/content?format=file&subpath=/target/sonic-mellanox.bin",
   "build-url": "https://dev.azure.com/mssonic/build/_build/results?buildId=170529&view=results",
- "diff": "https://github.com/Azure/sonic-buildimage/compare/...2abb9e1c464cdc1257691a8a24fd6266bda18ee0",
+ "diff": "https://github.com/Azure/sonic-buildimage/compare/8f80dc3a1b287414dec3d3291e99194b51d868bd...2abb9e1c464cdc1257691a8a24fd6266bda18ee0",
   "build": "170529",
   "date": "2022-11-06T08:00:29.5755611Z"
  },
