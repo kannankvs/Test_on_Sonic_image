@@ -19,14 +19,14 @@
   "build-url": "https://dev.azure.com/mssonic/build/_build/results?buildId=194702&view=results",
  "diff": "https://github.com/Azure/sonic-buildimage/compare/661669c8055729c906e1d18606e28a087b45f90f...550cd6649f82186b5cab3dd82a868a74d1f42e15",
   "build": "194702",
-  "date": "2022-12-27T08:00:37.5195467Z"
+  "date": ""
  },
 "sonic-vs.img.gz": {
   "url": "https://artprodcus3.artifacts.visualstudio.com/Af91412a5-a906-4990-9d7c-f697b81fc04d/be1b070f-be15-4154-aade-b1d3bfb17054/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL21zc29uaWMvcHJvamVjdElkL2JlMWIwNzBmLWJlMTUtNDE1NC1hYWRlLWIxZDNiZmIxNzA1NC9idWlsZElkLzE5NDY4MC9hcnRpZmFjdE5hbWUvc29uaWMtYnVpbGRpbWFnZS52cw2/content?format=file&subpath=/target/sonic-vs.img.gz",
   "build-url": "https://dev.azure.com/mssonic/build/_build/results?buildId=194680&view=results",
  "diff": "https://github.com/Azure/sonic-buildimage/compare/661669c8055729c906e1d18606e28a087b45f90f...550cd6649f82186b5cab3dd82a868a74d1f42e15",
   "build": "194680",
-  "date": ""
+  "date": "2022-12-27T08:00:26.2300249Z"
  },
 "sonic-innovium.bin": {
   "url": "",
@@ -161,14 +161,14 @@
   "build-url": "https://dev.azure.com/mssonic/build/_build/results?buildId=194659&view=results",
  "diff": "https://github.com/Azure/sonic-buildimage/compare/8358cffe2d8e5f853e0ebb91b9714046a778725c...8358cffe2d8e5f853e0ebb91b9714046a778725c",
   "build": "194659",
-  "date": "2022-12-27T08:00:17.2381312Z"
+  "date": ""
  },
 "sonic-generic-dbg.bin": {
   "url": "https://artprodcus3.artifacts.visualstudio.com/Af91412a5-a906-4990-9d7c-f697b81fc04d/be1b070f-be15-4154-aade-b1d3bfb17054/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL21zc29uaWMvcHJvamVjdElkL2JlMWIwNzBmLWJlMTUtNDE1NC1hYWRlLWIxZDNiZmIxNzA1NC9idWlsZElkLzE5NDY1OS9hcnRpZmFjdE5hbWUvc29uaWMtYnVpbGRpbWFnZS5nZW5lcmlj0/content?format=file&subpath=/target/sonic-generic-dbg.bin",
   "build-url": "https://dev.azure.com/mssonic/build/_build/results?buildId=194659&view=results",
  "diff": "https://github.com/Azure/sonic-buildimage/compare/8358cffe2d8e5f853e0ebb91b9714046a778725c...8358cffe2d8e5f853e0ebb91b9714046a778725c",
   "build": "194659",
-  "date": "2022-12-27T08:00:17.2381312Z"
+  "date": ""
  },
 "sonic-marvell-armhf.bin": {
   "url": "https://artprodcus3.artifacts.visualstudio.com/Af91412a5-a906-4990-9d7c-f697b81fc04d/be1b070f-be15-4154-aade-b1d3bfb17054/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL21zc29uaWMvcHJvamVjdElkL2JlMWIwNzBmLWJlMTUtNDE1NC1hYWRlLWIxZDNiZmIxNzA1NC9idWlsZElkLzE5NDY2Mi9hcnRpZmFjdE5hbWUvc29uaWMtYnVpbGRpbWFnZS5tYXJ2ZWxsLWFybWhm0/content?format=file&subpath=/target/sonic-marvell-armhf.bin",
@@ -333,7 +333,7 @@
   "build-url": "https://dev.azure.com/mssonic/build/_build/results?buildId=194646&view=results",
  "diff": "https://github.com/Azure/sonic-buildimage/compare/852d41ba95fe396c37e31310c0d746ae0aeafa8f...852d41ba95fe396c37e31310c0d746ae0aeafa8f",
   "build": "194646",
-  "date": ""
+  "date": "2022-12-27T08:00:14.3576474Z"
  },
 "sonic-centec-arm64.bin": {
   "url": "https://artprodcus3.artifacts.visualstudio.com/Af91412a5-a906-4990-9d7c-f697b81fc04d/be1b070f-be15-4154-aade-b1d3bfb17054/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL21zc29uaWMvcHJvamVjdElkL2JlMWIwNzBmLWJlMTUtNDE1NC1hYWRlLWIxZDNiZmIxNzA1NC9idWlsZElkLzE5NDY0My9hcnRpZmFjdE5hbWUvc29uaWMtYnVpbGRpbWFnZS5jZW50ZWMtYXJtNjQ1/content?format=file&subpath=/target/sonic-centec-arm64.bin",
