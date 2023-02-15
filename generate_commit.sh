@@ -8,6 +8,7 @@ git pull origin sonic_latest_images_links
 #set -euo pipefail
 
 
+
 DEFID_BRCM_CMT="$(curl -s 'https://sonic-build.azurewebsites.net/ui/sonic/pipelines/138/builds?branchName=master' | jq -r '.value[0].id')"
 
 DEFID_BRCM="$(curl -s 'https://dev.azure.com/mssonic/build/_apis/build/definitions?name=Azure.sonic-buildimage.official.broadcom' | jq -r '.value[0].id')"
