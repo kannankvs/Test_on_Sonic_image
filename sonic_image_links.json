@@ -301,11 +301,11 @@
   "date": "2023-02-15T08:00:13.3976764Z"
  },
 "sonic-vs.img.gz": {
-  "url": "",
-  "build-url": "https://dev.azure.com/mssonic/build/_build/results?buildId=&view=results",
+  "url": "https://artprodcus3.artifacts.visualstudio.com/Af91412a5-a906-4990-9d7c-f697b81fc04d/be1b070f-be15-4154-aade-b1d3bfb17054/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL21zc29uaWMvcHJvamVjdElkL2JlMWIwNzBmLWJlMTUtNDE1NC1hYWRlLWIxZDNiZmIxNzA1NC9idWlsZElkLzIxODc0Mi9hcnRpZmFjdE5hbWUvc29uaWMtYnVpbGRpbWFnZS52cw2/content?format=file&subpath=/target/sonic-vs.img.gz",
+  "build-url": "https://dev.azure.com/mssonic/build/_build/results?buildId=218742&view=results",
  "diff": "https://github.com/Azure/sonic-buildimage/compare/ab77eb5fceeabbd7eb9affd9f25412f863396d7f...57ddad3194d9546d45ae4548df8e306681eccc0e",
-  "build": "",
-  "date": "null"
+  "build": "218742",
+  "date": "2023-02-15T08:00:19.889536Z"
  },
 "sonic-innovium.bin": {
   "url": "",
