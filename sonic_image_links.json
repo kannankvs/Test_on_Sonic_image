@@ -457,11 +457,11 @@
   "date": "2023-02-15T08:00:30.6898584Z"
  },
 "sonic-nephos.bin": {
-  "url": "",
-  "build-url": "https://dev.azure.com/mssonic/build/_build/results?buildId=&view=results",
+  "url": "https://artprodcus3.artifacts.visualstudio.com/Af91412a5-a906-4990-9d7c-f697b81fc04d/be1b070f-be15-4154-aade-b1d3bfb17054/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL21zc29uaWMvcHJvamVjdElkL2JlMWIwNzBmLWJlMTUtNDE1NC1hYWRlLWIxZDNiZmIxNzA1NC9idWlsZElkLzIxODcxNi9hcnRpZmFjdE5hbWUvc29uaWMtYnVpbGRpbWFnZS5uZXBob3M1/content?format=file&subpath=/target/sonic-nephos.bin",
+  "build-url": "https://dev.azure.com/mssonic/build/_build/results?buildId=218716&view=results",
  "diff": "https://github.com/Azure/sonic-buildimage/compare/936679ee47fbfee2f7204fb1703aa649ce0da8b2...592ce16d05bb4b91196c908bf78a377723499568",
-  "build": "",
-  "date": "null"
+  "build": "218716",
+  "date": "2023-02-15T08:00:08.8193944Z"
  }
 }
 }
